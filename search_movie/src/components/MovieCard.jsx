@@ -4,9 +4,9 @@ import moviePoster from '../img/moviePoster.jpg';
 import logoBack from '../img/logoBack.svg'
 
 const MovieCard = ({ movie }) => {
+
     const src = movie.Poster === 'N/A' ? moviePoster : movie.Poster
 
-    console.log(movie)
     return (
         <div className="card">
             <div className='innerCard'>
@@ -17,7 +17,6 @@ const MovieCard = ({ movie }) => {
                     <h3 className='movieDirector'>{movie.Director}</h3>
                     <h5>{movie.Production}</h5>
                     <h5>{movie.Genre}</h5>
-                
                 </div>
                 <div className="cardBack">
                     <div className='rating'>
@@ -25,7 +24,7 @@ const MovieCard = ({ movie }) => {
                         <label >{movie.imdbRating}</label>
                     </div>
                     <div className="cardBackInfoWrapp">
-                        <img className="logoBack" src={logoBack} alt= "logoBack "/>
+                        <img className="logoBack" src={logoBack} alt="logoBack" />
                         <label className='cardBackLbl'>{movie.Writer}</label>
                         <label className='cardBackLbl'>Writters</label>
                         <p>{movie.Plot}</p>
@@ -35,7 +34,6 @@ const MovieCard = ({ movie }) => {
                 </div>
             </div>
         </div>
-
     )
 }
 

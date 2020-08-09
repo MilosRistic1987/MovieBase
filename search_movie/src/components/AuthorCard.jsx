@@ -1,15 +1,15 @@
 import React from 'react';
 import Avatar from '../img/avatar.jpg';
-import { FaGithub,FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const AuthorCard = () => {
     return (
         <div className="authorCard">
             <div className="imgWrapp">
                 <ul className='authorSocial'>
-                    <li><a href='https://github.com/MilosRistic1987' target='_blank' rel="noopener noreferrer"><FaGithub/></a></li>
-                    <li><a href='https://www.linkedin.com/in/milos-ristic-410b95195/' target='_blank' rel="noopener noreferrer"><FaLinkedin/></a></li>
-                    </ul>
+                    <li><a href='https://github.com/MilosRistic1987' target='_blank' rel="noopener noreferrer"><FaGithub title='Click to see my GitHub' /></a></li>
+                    <li><a href='https://www.linkedin.com/in/milos-ristic-410b95195/' target='_blank' rel="noopener noreferrer"><FaLinkedin title='Click to see my Linkedin'  /></a></li>
+                </ul>
                 <img src={Avatar} alt='avatar' />
             </div>
             <div className="authorCardInfo">
@@ -19,7 +19,6 @@ const AuthorCard = () => {
                 </div>
             </div>
         </div>
-
     )
 }
 

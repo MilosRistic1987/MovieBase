@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react';
 import MoviesHeader from '../components/MovieHeader';
 import MoviesBody from '../components/MoviesBody';
 import MoviesFooter from '../components/MoviesFooter';
-
-
+import NoMovieCard from '../components/NoMovieCard';
 
 const Home = () => {
 
@@ -14,8 +13,8 @@ const Home = () => {
     const [displayedMovies, setDisplayedMovies] = useState([]);
     const [startIndex, setStartIndex] = useState(0);
     const [endIndex, setEndIndex] = useState(3)
+    const [titleFound, setTitleFound] = useState(true)
  
-
 
     useEffect(() => {
         setFilteredMovies(movies)
@@ -47,12 +46,10 @@ const Home = () => {
 
     return (
         <div className='wrapper'>
-            <MoviesHeader title={title} setTitle={setTitle} setFilteredMovies={setFilteredMovies} filteredMovies={filteredMovies}  movies = {movies} setMovies={setMovies} />
-            <MoviesBody movies={displayedMovies} />
+            <MoviesHeader title={title} setTitle={setTitle} setFilteredMovies={setFilteredMovies} filteredMovies={filteredMovies}  movies = {movies} setMovies={setMovies} setTitleFound={setTitleFound} />
+            {titleFound?<MoviesBody movies={displayedMovies} />:<NoMovieCard/> }
            {movies.length?<MoviesFooter setIndexes={setIndexes} startIndex={startIndex} endIndex={endIndex} moviesCount={filteredMovies.length} />:<div></div>} 
         </div>
-
-
     )
 }
 
