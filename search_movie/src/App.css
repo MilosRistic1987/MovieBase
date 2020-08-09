@@ -561,26 +561,26 @@ body {
   }
 }
 
-@media only screen   
-and (min-width: 1030px)   
-and (max-width: 1366px) {
-  .card img {
-    max-height: 14rem;
-  }
-  body{
-    font-size: 48%;
-  }
-  .noMovieCard{
-    font-size: 1.5em;
-  }
-  .noMovieCard img{
-    height: 10rem;
-  }
-  .authorCard{
-    height: 28rem;
-  }
-  .imgWrapp img{
-    width: 30rem;
-    height: 20rem;
-  }
+@media only screen
+and (min-width: 1030px)
+and (max-width: 1566px) {
+.card img {
+max-height: 17rem;
+}
+body{
+font-size: 48%;
+}
+.noMovieCard{
+font-size: 1.5em;
+}
+.noMovieCard img{
+height: 15rem;
+}
+.authorCard{
+height: 28rem;
+}
+.imgWrapp img{
+width: 30rem;
+height: 20rem;
+}
 }
